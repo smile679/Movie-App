@@ -4,7 +4,6 @@ import { useDebounce } from 'react-use';
 import Spinner from './components/Spinner';
 import MovieCard from './components/MovieCard';
 import { updateSearchCount } from './appWrite';
-import Reveal from './components/Reveal';
 import Header from './components/Header';
 import Rank from './components/Rank';
 
