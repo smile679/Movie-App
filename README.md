@@ -1,12 +1,27 @@
-# React + Vite
+# 🎬 MovieScope
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**MovieScope** is a modern and responsive web application that allows users to browse, search, and discover movies from a wide selection of genres. Built with **React**, **Tailwind CSS**, and **React Router**, it provides a clean and interactive user experience.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **Search movies** by title
+- 🎞️ Browse trending and popular movies
+- 🧾 View detailed movie info: title, rating, description, poster, and more
+- 🌐 Fully **responsive design** (desktop, tablet, mobile)
+- ⚡ Built with **React**, **Tailwind CSS**
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[👉 View Live](https://moviescopapp.netlify.app/)  
+_(Replace this with your Netlify/Vercel link)_
+
+## 🛠️ Tech Stack
+
+- **React** – UI components
+- **Tailwind CSS** – Utility-first styling
+- **Movie API** – ([TMDB](https://www.themoviedb.org/))
+
+## 📷 Screenshots
+
+![Header Page](./screenshots/Header.jpg)
+![Home Page](./screenshots/Home.jpg)
