@@ -23,5 +23,8 @@ _(Replace this with your Netlify/Vercel link)_
 
 ## 📷 Screenshots
 
-![Header Page](./screenshots/Header.jpg)
-![Home Page](./screenshots/Home.jpg)
+![Header Page](./screenshots/header2.jpg)
+![Home2 Page](./screenshots/home2.jpg)
+![Home Page](./screenshots/home.jpg)
+![cards Page](./screenshots/cards.jpg)
+![cards2 Page](./screenshots/cards2.jpg)

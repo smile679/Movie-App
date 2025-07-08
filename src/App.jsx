@@ -1,12 +1,12 @@
 import './App.css';
-import hero from './images/hero.png';
-import Search from './components/Search';
 import { useEffect, useState } from 'react';
 import { useDebounce } from 'react-use';
 import Spinner from './components/Spinner';
 import MovieCard from './components/MovieCard';
-import { getTrendingMovies, updateSearchCount } from './appWrite';
+import { updateSearchCount } from './appWrite';
 import Reveal from './components/Reveal';
+import Header from './components/Header';
+import MovieRank from './components/moviesRank';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
     const BASE_URL = "https://api.themoviedb.org/3";
@@ -22,7 +22,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [movieList, setMovieList] = useState([]);
-  const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState();
 
@@ -60,46 +59,15 @@ function App() {
     }
   }
 
-  const loadTrendingMovies = async (query = '') => {
-        try {
-           const movies = await getTrendingMovies();
-           setTrendingMovies(movies);
-        }catch(error){
-          console.error(`error fetching trending movies: ${error}`)
-        }
-  }
   useEffect(()=>{
      fetchData(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
-  useEffect(()=>{
-    loadTrendingMovies();
-  }, []);
-
   return (
        <main>
-        <div className='pattern'/>
-        <Reveal>
-          <header className='wrapper'>
-          <img src={hero} alt="image" />
-          <h1>Find <span>Movies</span> you will enjoy with out hasel</h1>
-           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        </header>
-        </Reveal>
-
-        <section className='trending'>
-          <ul>
-          {trendingMovies.map((movie, index)=>
-            <Reveal>
-            <li key={movie.$id}>
-            <p>{index + 1}</p>
-            <img src={movie.poster_url} alt={movie.title} />
-            </li>
-            </Reveal>
-          )} 
-          </ul>
-        </section>
-
+        {/* <div className='pattern'/> */}
+         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+         <MovieRank/>
          <section className='all-movies'>
            <h2>All Movies</h2>
           {isLoading ? (<Spinner/>) : errorMessage ? (<p className='text-red-500'>{errorMessage}</p>) : 
