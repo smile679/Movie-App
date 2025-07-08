@@ -13,7 +13,6 @@
 ## 🌐 Live Demo
 
 [👉 View Live](https://moviescopapp.netlify.app/)  
-_(Replace this with your Netlify/Vercel link)_
 
 ## 🛠️ Tech Stack
 

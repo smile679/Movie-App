@@ -6,7 +6,7 @@ import MovieCard from './components/MovieCard';
 import { updateSearchCount } from './appWrite';
 import Reveal from './components/Reveal';
 import Header from './components/Header';
-import MovieRank from './components/moviesRank';
+import Rank from './components/Rank';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
     const BASE_URL = "https://api.themoviedb.org/3";
@@ -67,7 +67,7 @@ function App() {
        <main>
         {/* <div className='pattern'/> */}
          <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-         <MovieRank/>
+         <Rank/>
          <section className='all-movies'>
            <h2>All Movies</h2>
           {isLoading ? (<Spinner/>) : errorMessage ? (<p className='text-red-500'>{errorMessage}</p>) : 

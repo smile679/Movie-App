@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { getTrendingMovies } from './src/appWrite';
-import Reveal from './src/components/Reveal'
+import { getTrendingMovies } from '../appWrite'
+import Reveal from './Reveal'
 
-const MoviesRank =()=>{
+const Rank =()=>{
   const [trendingMovies, setTrendingMovies] = useState([]);
 
   const loadTrendingMovies = async (query = '') => {
@@ -33,4 +33,4 @@ const MoviesRank =()=>{
 }
 
 
-export default MoviesRank;
+export default Rank;
